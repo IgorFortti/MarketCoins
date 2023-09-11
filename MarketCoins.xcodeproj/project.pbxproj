@@ -52,6 +52,9 @@
 		FACE799B2AAF523E000A7588 /* CoinModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE79952AAF523E000A7588 /* CoinModels.swift */; };
 		FACE799C2AAF523E000A7588 /* CoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE79962AAF523E000A7588 /* CoinViewController.swift */; };
 		FACE799D2AAF523E000A7588 /* CoinInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE79972AAF523E000A7588 /* CoinInteractor.swift */; };
+		FACE79A02AAFAD03000A7588 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = FACE799F2AAFAD03000A7588 /* Charts */; };
+		FACE79A22AAFAF15000A7588 /* MarketChartDataWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE79A12AAFAF15000A7588 /* MarketChartDataWorker.swift */; };
+		FACE79A42AAFAF2E000A7588 /* OHLCWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE79A32AAFAF2E000A7588 /* OHLCWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +105,8 @@
 		FACE79952AAF523E000A7588 /* CoinModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModels.swift; sourceTree = "<group>"; };
 		FACE79962AAF523E000A7588 /* CoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewController.swift; sourceTree = "<group>"; };
 		FACE79972AAF523E000A7588 /* CoinInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinInteractor.swift; sourceTree = "<group>"; };
+		FACE79A12AAFAF15000A7588 /* MarketChartDataWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketChartDataWorker.swift; sourceTree = "<group>"; };
+		FACE79A32AAFAF2E000A7588 /* OHLCWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OHLCWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FACE79A02AAFAD03000A7588 /* Charts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +290,8 @@
 				FACE79952AAF523E000A7588 /* CoinModels.swift */,
 				FACE79962AAF523E000A7588 /* CoinViewController.swift */,
 				FACE79972AAF523E000A7588 /* CoinInteractor.swift */,
+				FACE79A12AAFAF15000A7588 /* MarketChartDataWorker.swift */,
+				FACE79A32AAFAF2E000A7588 /* OHLCWorker.swift */,
 			);
 			path = Coin;
 			sourceTree = "<group>";
@@ -304,6 +312,9 @@
 			dependencies = (
 			);
 			name = MarketCoins;
+			packageProductDependencies = (
+				FACE799F2AAFAD03000A7588 /* Charts */,
+			);
 			productName = MarketCoins;
 			productReference = FA39A0C22AAA95AE00F732F1 /* MarketCoins.app */;
 			productType = "com.apple.product-type.application";
@@ -332,6 +343,9 @@
 				Base,
 			);
 			mainGroup = FA39A0B92AAA95AE00F732F1;
+			packageReferences = (
+				FACE799E2AAFAD02000A7588 /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = FA39A0C32AAA95AE00F732F1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -362,6 +376,7 @@
 			files = (
 				FA39A0CA2AAA95AE00F732F1 /* ViewController.swift in Sources */,
 				FA816C2E2AAB7EA100DE587B /* CoinsListRouter.swift in Sources */,
+				FACE79A22AAFAF15000A7588 /* MarketChartDataWorker.swift in Sources */,
 				FA816C352AAB817300DE587B /* KarketCoinsError.swift in Sources */,
 				FA39A0C62AAA95AE00F732F1 /* AppDelegate.swift in Sources */,
 				FA816C402AABC59B00DE587B /* CoinHeaderView.swift in Sources */,
@@ -388,6 +403,7 @@
 				FA39A0E62AAA9B2000F732F1 /* GenericStore.swift in Sources */,
 				FA816C202AAB755800DE587B /* Extensions.swift in Sources */,
 				FA816C422AABD13C00DE587B /* FiltersView.swift in Sources */,
+				FACE79A42AAFAF2E000A7588 /* OHLCWorker.swift in Sources */,
 				FA816C0B2AAB6D7200DE587B /* MarketChartModel.swift in Sources */,
 				FACE799D2AAF523E000A7588 /* CoinInteractor.swift in Sources */,
 				FA816C1E2AAB72ED00DE587B /* GlobalStore.swift in Sources */,
@@ -622,6 +638,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FACE799E2AAFAD02000A7588 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FACE799F2AAFAD03000A7588 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FACE799E2AAFAD02000A7588 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA39A0BA2AAA95AE00F732F1 /* Project object */;
 }

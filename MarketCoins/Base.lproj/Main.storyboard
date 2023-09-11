@@ -383,7 +383,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OMo-cz-ni8" userLabel="Graphic View">
                                                 <rect key="frame" x="8" y="146" width="398" height="322"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EtB-S5-W5R">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EtB-S5-W5R" customClass="LineChartView" customModule="Charts">
                                                         <rect key="frame" x="0.0" y="0.0" width="398" height="209"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
@@ -1158,6 +1158,48 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="LF2-6S-4m1"/>
                     <size key="freeformSize" width="414" height="1158"/>
+                    <connections>
+                        <outlet property="changePercentageLabel" destination="b1i-rL-1Gi" id="7oQ-zh-zVl"/>
+                        <outlet property="coinCurrentPriceBaseCurrencyLabel" destination="qyy-nx-6IL" id="2Ui-TT-CYa"/>
+                        <outlet property="coinGraphicView" destination="OMo-cz-ni8" id="KYW-l9-Nbf"/>
+                        <outlet property="coinResumeView" destination="3hj-Xx-kBf" id="rhc-NE-vhP"/>
+                        <outlet property="coinValuesView" destination="GXz-SU-wEg" id="cIe-Ne-92v"/>
+                        <outlet property="fullyDilutedValuationLabel" destination="Oaw-gn-JzS" id="Pxo-mx-Jb0"/>
+                        <outlet property="marketCapitalizationLabel" destination="VYz-Iq-jkX" id="dUK-v8-awU"/>
+                        <outlet property="marketChartMaximumView" destination="zYt-6c-b7F" id="x0O-Hs-LaW"/>
+                        <outlet property="marketChartOneDayView" destination="MS5-kG-S4T" id="B3z-cj-wuy"/>
+                        <outlet property="marketChartOneHourView" destination="iFd-jT-JYG" id="NaB-Bt-Det"/>
+                        <outlet property="marketChartOneMonthView" destination="mMH-X1-eGW" id="VPL-RR-LhI"/>
+                        <outlet property="marketChartOneWeekView" destination="yOW-md-R5c" id="e2c-yj-h6N"/>
+                        <outlet property="marketChartOneYearView" destination="hPg-D6-8Dd" id="HWe-B1-hCB"/>
+                        <outlet property="marketChartThreeMonthsView" destination="unu-vM-Se8" id="7oJ-9N-ehW"/>
+                        <outlet property="marketChartView" destination="EtB-S5-W5R" id="yh7-vw-KIW"/>
+                        <outlet property="marketClassificationRankLabel" destination="M1S-BX-Vxw" id="ZTh-vR-1YH"/>
+                        <outlet property="marketDataCoinCurrentPriceLabel" destination="0GL-7P-6nx" id="Mds-ZG-pG2"/>
+                        <outlet property="marketDataCoinIconImageView" destination="K7Q-cD-k07" id="TAI-Go-1yi"/>
+                        <outlet property="marketDataCoinSymbolLabel" destination="PU5-bK-SB1" id="S3b-hs-UTu"/>
+                        <outlet property="marketDataComparationActionView" destination="mSw-c1-2pm" id="QTr-nl-nMk"/>
+                        <outlet property="marketDataComparationCurrencyPriceLabel" destination="GZp-wx-kgj" id="n4D-mS-KDq"/>
+                        <outlet property="marketDataComparationSymbolLabel" destination="nJH-wx-CA8" id="upd-V7-uxp"/>
+                        <outlet property="maximumDateLabel" destination="FHS-bV-eiw" id="0QZ-2n-yCX"/>
+                        <outlet property="maximumPercentageLabel" destination="J1T-jC-RnA" id="vcj-eq-o2W"/>
+                        <outlet property="maximumSupplyLabel" destination="jtb-2a-Pdl" id="qOg-5W-hcq"/>
+                        <outlet property="maximumValueLabel" destination="aq8-Yv-G4k" id="yeT-36-bRr"/>
+                        <outlet property="minimumDateLabel" destination="ZpP-O6-dJh" id="LPF-Sk-wsW"/>
+                        <outlet property="minimumPercentageLabel" destination="RaG-Bf-s61" id="Hm5-uE-D3t"/>
+                        <outlet property="minimumValueLabel" destination="XQi-iz-Lsj" id="iig-Ss-VSs"/>
+                        <outlet property="priceChangePercentageOneDayLabel" destination="E6l-fI-vJW" id="oSi-iu-9po"/>
+                        <outlet property="priceChangePercentageOneMonthLabel" destination="bG9-Jc-vlP" id="J0i-Z3-7p2"/>
+                        <outlet property="priceChangePercentageOneWeekLabel" destination="1x3-OX-gtl" id="ERJ-Ho-DOm"/>
+                        <outlet property="priceChangePercentageOneYearLabel" destination="ZUj-ZL-7ZI" id="96n-39-B7y"/>
+                        <outlet property="priceChangePercentageTwoMonthsLabel" destination="Q1o-Q8-B6P" id="z5M-xb-DLg"/>
+                        <outlet property="priceChangePercentageTwoWeeksLabel" destination="jdj-2h-XlI" id="cfX-Pi-T9F"/>
+                        <outlet property="supplyAvailableLabel" destination="QXl-ws-XGu" id="FGa-1i-lqi"/>
+                        <outlet property="totalSupplyLabel" destination="Mmo-GA-WsB" id="8Ld-q6-LNH"/>
+                        <outlet property="twentyFourHourHighLabel" destination="4AG-Z8-KCW" id="LMS-uN-CZZ"/>
+                        <outlet property="twentyFourHourLowLabel" destination="1Fs-7p-NdL" id="nNJ-XQ-wL7"/>
+                        <outlet property="volumeBusinessLabel" destination="1ti-1g-eP0" id="8Yz-Ca-0TZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bv5-Zf-eag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
