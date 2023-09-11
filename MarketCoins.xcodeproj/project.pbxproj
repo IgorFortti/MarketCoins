@@ -46,6 +46,12 @@
 		FA816C3E2AABC55E00DE587B /* CoinHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA816C3D2AABC55E00DE587B /* CoinHeaderView.xib */; };
 		FA816C402AABC59B00DE587B /* CoinHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA816C3F2AABC59B00DE587B /* CoinHeaderView.swift */; };
 		FA816C422AABD13C00DE587B /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA816C412AABD13C00DE587B /* FiltersView.swift */; };
+		FACE79982AAF523E000A7588 /* CoinPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE79922AAF523E000A7588 /* CoinPresenter.swift */; };
+		FACE79992AAF523E000A7588 /* CoinWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE79932AAF523E000A7588 /* CoinWorker.swift */; };
+		FACE799A2AAF523E000A7588 /* CoinRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE79942AAF523E000A7588 /* CoinRouter.swift */; };
+		FACE799B2AAF523E000A7588 /* CoinModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE79952AAF523E000A7588 /* CoinModels.swift */; };
+		FACE799C2AAF523E000A7588 /* CoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE79962AAF523E000A7588 /* CoinViewController.swift */; };
+		FACE799D2AAF523E000A7588 /* CoinInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE79972AAF523E000A7588 /* CoinInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +96,12 @@
 		FA816C3D2AABC55E00DE587B /* CoinHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoinHeaderView.xib; sourceTree = "<group>"; };
 		FA816C3F2AABC59B00DE587B /* CoinHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinHeaderView.swift; sourceTree = "<group>"; };
 		FA816C412AABD13C00DE587B /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
+		FACE79922AAF523E000A7588 /* CoinPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinPresenter.swift; sourceTree = "<group>"; };
+		FACE79932AAF523E000A7588 /* CoinWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinWorker.swift; sourceTree = "<group>"; };
+		FACE79942AAF523E000A7588 /* CoinRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRouter.swift; sourceTree = "<group>"; };
+		FACE79952AAF523E000A7588 /* CoinModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModels.swift; sourceTree = "<group>"; };
+		FACE79962AAF523E000A7588 /* CoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewController.swift; sourceTree = "<group>"; };
+		FACE79972AAF523E000A7588 /* CoinInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +243,7 @@
 		FA816C242AAB7E6400DE587B /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FACE79912AAF51AE000A7588 /* Coin */,
 				FA816C252AAB7E7700DE587B /* CoinsList */,
 			);
 			path = Scenes;
@@ -260,6 +273,19 @@
 				FA816C3F2AABC59B00DE587B /* CoinHeaderView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		FACE79912AAF51AE000A7588 /* Coin */ = {
+			isa = PBXGroup;
+			children = (
+				FACE79922AAF523E000A7588 /* CoinPresenter.swift */,
+				FACE79932AAF523E000A7588 /* CoinWorker.swift */,
+				FACE79942AAF523E000A7588 /* CoinRouter.swift */,
+				FACE79952AAF523E000A7588 /* CoinModels.swift */,
+				FACE79962AAF523E000A7588 /* CoinViewController.swift */,
+				FACE79972AAF523E000A7588 /* CoinInteractor.swift */,
+			);
+			path = Coin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +367,7 @@
 				FA816C402AABC59B00DE587B /* CoinHeaderView.swift in Sources */,
 				FA816C3C2AABBEA800DE587B /* CoinViewCell.swift in Sources */,
 				FA816C2D2AAB7EA100DE587B /* CoinsListWorker.swift in Sources */,
+				FACE79992AAF523E000A7588 /* CoinWorker.swift in Sources */,
 				FA816C0D2AAB6E0D00DE587B /* CurrentDataDataProvider.swift in Sources */,
 				FA816C0F2AAB6E8700DE587B /* ListCoinsDataProvider.swift in Sources */,
 				FA816C182AAB71B200DE587B /* CoinsRouter.swift in Sources */,
@@ -349,8 +376,10 @@
 				FA816C302AAB7EA100DE587B /* CoinsListViewController.swift in Sources */,
 				FA816C222AAB768E00DE587B /* FilterUtils.swift in Sources */,
 				FA816C1A2AAB71BB00DE587B /* GlobalRouter.swift in Sources */,
+				FACE79982AAF523E000A7588 /* CoinPresenter.swift in Sources */,
 				FA816C332AAB811100DE587B /* GlobalValuesWorker.swift in Sources */,
 				FA39A0C82AAA95AE00F732F1 /* SceneDelegate.swift in Sources */,
+				FACE799C2AAF523E000A7588 /* CoinViewController.swift in Sources */,
 				FA39A0E42AAA9ADF00F732F1 /* API.swift in Sources */,
 				FA816C3A2AABBE9900DE587B /* FilterViewCell.swift in Sources */,
 				FA816C2C2AAB7EA100DE587B /* CoinsListPresenter.swift in Sources */,
@@ -360,13 +389,16 @@
 				FA816C202AAB755800DE587B /* Extensions.swift in Sources */,
 				FA816C422AABD13C00DE587B /* FiltersView.swift in Sources */,
 				FA816C0B2AAB6D7200DE587B /* MarketChartModel.swift in Sources */,
+				FACE799D2AAF523E000A7588 /* CoinInteractor.swift in Sources */,
 				FA816C1E2AAB72ED00DE587B /* GlobalStore.swift in Sources */,
 				FA816C032AAB63F000DE587B /* CoinModel.swift in Sources */,
 				FA816C382AABBE8D00DE587B /* GlobalValuesViewCell.swift in Sources */,
 				FA816C112AAB6EB500DE587B /* MarketChartDataProvider.swift in Sources */,
 				FA816C2F2AAB7EA100DE587B /* CoinsListModels.swift in Sources */,
+				FACE799A2AAF523E000A7588 /* CoinRouter.swift in Sources */,
 				FA816C092AAB6D5100DE587B /* GraphicDataModel.swift in Sources */,
 				FA816C052AAB66F900DE587B /* CurrentDataModel.swift in Sources */,
+				FACE799B2AAF523E000A7588 /* CoinModels.swift in Sources */,
 				FA816C162AAB6F3200DE587B /* GlobalValuesDataProvider.swift in Sources */,
 				FA816C312AAB7EA100DE587B /* CoinsListInteractor.swift in Sources */,
 			);
