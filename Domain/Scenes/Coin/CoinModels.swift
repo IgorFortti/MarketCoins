@@ -11,21 +11,100 @@
 //
 
 import UIKit
+import Charts
 
-enum Coin
-{
-  // MARK: Use cases
-  
-  enum Something
-  {
-    struct Request
-    {
+enum Coin {
+    // MARK: Use cases
+    
+    enum FetchCurrentData {
+        struct Request {
+            let baseCoin: CoinsFilterEnum
+        }
+        struct Response {
+            let baseCoin: CoinsFilterEnum
+            let currentPrice: Double
+            let priceChangePercentage: Double
+            let coinName: String
+            let coinSymbol: String
+            let coinImage: String
+            let currentPriceComparationToCoin: Double
+            let comparationToCoinSymbol: String
+            let priceChangePercentageOneDay: Double
+            let priceChangePercentageOneWeek: Double
+            let priceChangePercentageTwoWeeks: Double
+            let priceChangePercentageOneMonth: Double
+            let priceChangePercentageTwoMonths: Double
+            let priceChangePercentageOneYear: Double
+            let marketCapRank: Int
+            let marketCap: Double
+            let fullyDilutedValuation: Double
+            let totalVolume: Double
+            let high24h: Double
+            let low24h: Double
+            let supplyAvailable: Double
+            let totalSupply: Double
+            let maxSupply: Double
+            let maximumValue: Double
+            let maximumValuePercentage: Double
+            let maximumValueDate: Date
+            let minimumValue: Double
+            let minimumValuePercentage: Double
+            let minimumValueDate: Date
+        }
+        struct ViewModel {
+            let currentPrice: String
+            let priceChangePercentage: NSAttributedString
+            let coinName: String
+            let coinPrice: String
+            let coinSymbol: String
+            let coinImage: String
+            let currentPriceComparationToCoin: String
+            let comparationToCoinSymbol: String
+            let priceChangePercentageOneDay: NSAttributedString
+            let priceChangePercentageOneWeek: NSAttributedString
+            let priceChangePercentageTwoWeeks: NSAttributedString
+            let priceChangePercentageOneMonth: NSAttributedString
+            let priceChangePercentageTwoMonths: NSAttributedString
+            let priceChangePercentageOneYear: NSAttributedString
+            let marketCapRank: String
+            let marketCap: String
+            let fullyDilutedValuation: String
+            let totalVolume: String
+            let high24h: String
+            let low24h: String
+            let supplyAvailable: String
+            let totalSupply: String
+            let maxSupply: String
+            let maximumValue: String
+            let maximumValuePercentage: String
+            let maximumValueDate: String
+            let minimumValue: String
+            let minimumValuePercentage: String
+            let minimumValueDate: String
+        }
     }
-    struct Response
-    {
+    
+    enum FetchMarketChart {
+        struct Request {
+            let baseCoin: CoinsFilterEnum
+            let from: Date
+            let to: Date
+        }
+        struct Response {
+            let price: Double
+            let dataEntry: ChartDataEntry
+        }
+        struct ViewModel {
+            let minimumPrice: Double
+            let maximumPrice: Double
+            let dataEntries: [ChartDataEntry]
+        }
     }
-    struct ViewModel
-    {
+    
+    enum FetchOhlc {
+        struct Request {
+            let baseCoin: CoinsFilterEnum
+            let day: String
+        }
     }
-  }
 }

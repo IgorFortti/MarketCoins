@@ -28,5 +28,4 @@ class OHLCDataProvider: DataProviderManager<OHLCDataProviderDelegate, [GraphicDa
             }
         })
     }
-    
 }
