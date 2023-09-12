@@ -64,6 +64,7 @@ class CoinsListInteractor: CoinsListBusinessLogic, CoinsListDataStore {
                 self.coins = listCoinsModel
                 self.createListCoinsResponse(request: request, listCoins: listCoinsModel)
             case .failure(let error):
+                debugPrint("%%%%\(error.localizedDescription)%%%%")
                 self.presenter?.presentError(error: error)
             }
         })

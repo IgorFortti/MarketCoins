@@ -86,7 +86,7 @@ class CoinsListPresenter: CoinsListPresentationLogic {
     }
     
     func presentListCoins(response: [CoinsList.FetchListCoins.Response]) {
-        let coins = response.map { response in
+        let coins = response.map { response -> CoinsList.FetchListCoins.ViewModel.Coin in
             var rank = "-"
             
             if let marketCapRank = response.marketCapRank {
